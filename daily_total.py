@@ -25,9 +25,9 @@ except UnicodeDecodeError:
             dates.append(row[0])
             daily_sum.append(int(row[1]))
 
-# Plot the bar chart
-fig, ax = plt.subplots(figsize=(9,3))
-ax.bar(dates, daily_sum)
+# Plot the line chart
+fig, ax = plt.subplots(figsize=(12,3))
+ax.plot(dates, daily_sum)
 ax.set_xlabel('Date')
 ax.set_ylabel('Daily Sum')
 ax.set_title('Daily Sum over Time')
